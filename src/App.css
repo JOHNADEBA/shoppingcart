@@ -1,38 +1,158 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loading{
+  margin-top: 5rem;
+  font-size: 3rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+	background: blueviolet;
+	color: white;
+}
+.header-content {
+	font-size: 1.5rem;
+	padding: 1rem;
+	width: 50%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header-content h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.cart {
+	font-size: 2rem;
+}
+.icon-container {
+	position: relative;
+}
+.number {
+  padding: .2rem;
+	font-size: 1.1rem;
+	position: absolute;
+	top: -1.5rem;
+	left: 1.2rem;
+	background: rgb(159, 92, 222);
+	height: 1.5rem;
+	width: 1.5rem;
+	border-radius: 50%;
+}
+.main-container, footer {
+	width: 50%;
+	margin:  auto;
+	/* border: solid red; */
+}
+.selected_item{
+  margin: 4rem 0;
+  font-size: 2rem;
+}
+.product, .top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1.5rem 0;
+}
+.img-cont {
+	display: flex;
+	justify-content: space-between;
+
+}
+.img {
+  margin-right: 3rem;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 0.3rem;
+}
+.middle {
+	text-align: left;
+}
+.middle p{
+  font-weight: 500;
+	margin: 0;
+}
+.price{
+  color: hsl(210, 22%, 49%);
+  font-size: .8rem;
+}
+.middle button{
+  padding: 0;
+	margin-top: 1.5rem;
+}
+button{
+  transition: all .3s linear;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: rgb(159, 92, 222);
+}
+button:hover{
+  color: rgba(159, 92, 222, .5);
+  outline: 0;
+}
+.btn{
+  font-size: 2rem;
+}
+.amount{
+  margin: 0;
+}
+footer{
+  margin-top: 3rem;
+  border-top: solid rgb(159, 92, 222) .15rem;
+}
+.top{
+  margin-top: .5rem;
+}
+.top p{
+  letter-spacing: .3rem;
+margin: 0;
+font-weight: bold;
+}
+.clear{
+  margin-top: 1.8rem;
+  border: #bb2525 solid .1rem;
+  border-radius: .3rem;
+  padding: 1rem 1.5rem;
+  letter-spacing: .3rem;
+  cursor: pointer;
+  color: #bb2525;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.clear:hover{
   color: white;
+  background:#bb2525 ;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@media screen and (max-width: 800px) {
+  .loading{
+    margin-top: 2rem;
+    color: red;
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+  .selected_item{
+    margin: 1rem;
+  }
+	.header-content,
+	.main-container {
+		margin: 0;
+		padding: 1rem 0;
+		width: 100%;
+	}
+	.cart {
+		margin-left: 2rem;
+	}
+	.icon {
+		margin-right: 2rem;
+	}
+  .product{
+    margin: 2rem;
+  }
+  footer{
+    width: calc(100% - 4rem) ;
+    margin-bottom: 1rem;
   }
 }

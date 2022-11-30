@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header";
+import Items from "./components/Items";
+import Footer from "./components/Footer";
+import { useGlobalContext } from "./services/context";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const { allItems } = useGlobalContext();
+
+	if (allItems.length === 0) {
+		return (
+      <div className="App">
+      <Header />
+				<h2 className="loading">NO SELECTED ITEM</h2>
+			</div>
+		);
+	}
+	return (
+		<div className="App">
+			<Header />
+
+			<div></div>
+			<Items />
+			<Footer />
+		</div>
+	);
 }
 
 export default App;
